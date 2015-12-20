@@ -1,0 +1,25 @@
+Source: iftop
+Section: net
+Priority: optional
+Maintainer: Markus Koschany <apo@debian.org>
+Build-Depends:
+ debhelper (>= 9),
+ dh-autoreconf,
+ libncurses5-dev,
+ libpcap0.8-dev
+Standards-Version: 3.9.6
+Homepage: http://www.ex-parrot.com/~pdw/iftop/
+Vcs-Git: git://anonscm.debian.org/collab-maint/iftop.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/iftop.git
+
+Package: iftop
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: displays bandwidth usage information on an network interface
+ iftop does for network usage what top(1) does for CPU usage. It listens to
+ network traffic on a named interface and displays a table of current bandwidth
+ usage by pairs of hosts. Handy for answering the question "Why is my Internet
+ link so slow?".
+
